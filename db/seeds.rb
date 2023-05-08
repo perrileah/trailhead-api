@@ -21,11 +21,15 @@
 #             password_digest: "password",
 #             image_url: "https://avatars.githubusercontent.com/u/125906074?v=4")
 
-Review.create(
-  hike_id: 1,
-  user_id: 1,
-  time: "1 hour",
-  ranking: 5,
-  comments: "Easy, peaceful hike. Not many other hikers.",
-  image_url: "https://www.kenoshacounty.org/ImageRepository/Document?documentID=12857",
+# Review.create(
+#   hike_id: 1,
+#   user_id: 1,
+#   time: "1 hour",
+#   ranking: 5,
+#   comments: "Easy, peaceful hike. Not many other hikers.",
+#   image_url: "https://www.kenoshacounty.org/ImageRepository/Document?documentID=12857",
+# )
+
+Park.create(
+  name: "Petr",
 )
