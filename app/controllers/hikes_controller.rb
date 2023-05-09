@@ -25,6 +25,19 @@ class HikesController < ApplicationController
     render :show
   end
 
+  def update
+    @hike = Hike.find_by(id: params[:id])
+    @hike.update(
+      name: params[:name] || @hike.name,
+      park_id: params[:park_id] || @hike.park_id,
+      distance: params[:distance] || @hike.distance,
+      time: params[:time] || @hike.time,
+      image_url: params[:image_url] || @hike.image_url,
+      route_type: params[:route_type] || @hike.route_type,
+    )
+    render :show
+  end
+
   def destroy
     @hike = Hike.find_by(id: params[:id])
     @hike.destroy

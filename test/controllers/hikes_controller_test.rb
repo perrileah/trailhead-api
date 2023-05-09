@@ -24,6 +24,15 @@ class HikesControllerTest < ActionDispatch::IntegrationTest
     assert_equal ["id", "name", "park_id", "distance", "time", "image_url", "route_type"], data.keys
   end
 
+  test "update" do
+    hike = Hike.first
+    patch "/hikes/#{hike.id}.json", params: { name: "Updated name" }
+    assert_response 200
+
+    data = JSON.parse(response.body)
+    assert_equal "Updated name", data["name"]
+  end
+
   test "destroy" do
     assert_difference "Hike.count", -1 do
       delete "/hikes/#{Hike.first.id}.json"

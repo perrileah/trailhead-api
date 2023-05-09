@@ -37,3 +37,17 @@ Content-Type: application/json
 ###
 
 GET http://localhost:3000/hikes.json
+
+###
+
+POST http://localhost:3000/reviews.json
+Content-Type: application/json
+
+{
+  "hike_id": 9,
+  "user_id": 3,
+  "ranking": 5,
+  "comments": "amazing",
+  "image_url": "https://www.larimer.gov/sites/default/files/06_horsetooth_mountain_01_by_jeanie_sumrall-ajero.jpg",
+  "time": "2 hours"
+}
