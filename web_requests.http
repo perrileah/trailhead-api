@@ -1,0 +1,26 @@
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2ODM3MzY4NjB9.OeJdHH016J419BARS6cFI-vTLPHzWi7fDlDYemEOu8U
+
+POST http://localhost:3000/sessions.json
+Content-Type: application/json 
+
+{
+  "email": "Leah@test.com",
+  "password": "password"
+}
+
+###
+
+POST http://localhost:3000/users.json
+Content-Type: application/json
+
+{
+  "name": "Leah",
+  "email": "Leah@test.com",
+  "password": "password",
+  "password_confirmation": "password",
+  "image_url": "image url"
+}
+
+POST http://localhost:3000/hikes.json
+Authorization: Bearer {{jwt}}
+Content-Type: application/json
