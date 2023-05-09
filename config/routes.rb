@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   get "/hikes" => "hikes#index"
   post "/hikes" => "hikes#create"
   get "/hikes/:id" => "hikes#show"
+  delete "/hikes/:id" => "hikes#destroy"
 end

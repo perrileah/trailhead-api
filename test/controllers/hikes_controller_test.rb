@@ -23,4 +23,11 @@ class HikesControllerTest < ActionDispatch::IntegrationTest
     data = JSON.parse(response.body)
     assert_equal ["id", "name", "park_id", "distance", "time", "image_url", "route_type"], data.keys
   end
+
+  test "destroy" do
+    assert_difference "Hike.count", -1 do
+      delete "/hikes/#{Hike.first.id}.json"
+      assert_response 200
+    end
+  end
 end

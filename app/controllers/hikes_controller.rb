@@ -11,7 +11,7 @@ class HikesController < ApplicationController
       distance: params[:distance],
       time: params[:time],
       image_url: params[:image_url],
-      route_type: params[:route_type]
+      route_type: params[:route_type],
     )
     if @hike.save
       render :show
@@ -23,5 +23,11 @@ class HikesController < ApplicationController
   def show
     @hike = Hike.find_by(id: params[:id])
     render :show
+  end
+
+  def destroy
+    @hike = Hike.find_by(id: params[:id])
+    @hike.destroy
+    render json: { message: "Hike destroyed successfully" }
   end
 end
