@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   post "/users" => "users#create"
   post "/sessions" => "sessions#create"
   get "/hikes" => "hikes#index"
+  post "/hikes" => "hikes#create"
+  get "/hikes/:id" => "hikes#show"
 end

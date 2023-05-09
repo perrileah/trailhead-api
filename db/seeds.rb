@@ -16,12 +16,12 @@
 #   route_type: "out & back",
 # )
 
-User.create(
-  name: "leah",
-  email: "leah@example.com",
-  password_digest: "password",
-  image_url: "https://avatars.githubusercontent.com/u/125906074?v=4",
-)
+# User.create(
+#   name: "leah",
+#   email: "leah@example.com",
+#   password_digest: "password",
+#   image_url: "https://avatars.githubusercontent.com/u/125906074?v=4",
+# )
 
 # Review.create(
 #   hike_id: 1,
@@ -30,4 +30,13 @@ User.create(
 #   ranking: 5,
 #   comments: "Easy, peaceful hike. Not many other hikers.",
 #   image_url: "https://www.kenoshacounty.org/ImageRepository/Document?documentID=12857",
+# )
+
+# Park.create(
+#   name: "Test",
+#   city: "test",
+#   state: "test",
+#   zip: 53142,
+#   description: "test",
+#   image_url: "image url",
 # )
