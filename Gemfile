@@ -11,6 +11,8 @@ gem "sprockets-rails"
 
 gem 'jwt'
 
+gem "http"
+
 # Use postgresql as the database for Active Record
 gem "pg", "~> 1.1"
 
@@ -72,3 +74,5 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem "rack-cors"
