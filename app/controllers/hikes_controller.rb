@@ -1,6 +1,8 @@
 class HikesController < ApplicationController
   def index
-    @hikes = Hike.all
+    page_size = 5
+
+    @hikes = Hike.all.limit(page_size).offset(params[:page].to_i * page_size)
     render :index
   end
 
