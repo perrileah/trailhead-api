@@ -1,17 +1,5 @@
 require "csv"
 
-CSV.foreach(Rails.root.join("alltrails-data.csv"), headers: true) do |row|
-  Hike.create({
-    name: row["name"],
-    park_id: 0,
-    distance: row["length"],
-    time: "1 hour",
-    image_url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/04/ac/2b/petrifying-springs-park.jpg?w=1200&h=-1&s=1",
-    route_type: row["route_type"],
-    features: row["features"],
-  })
-end
-
 # CSV.foreach(Rails.root.join("alltrails-data.csv"), headers: true) do |row|
 #   Park.create({
 #     name: row["area_name"],
@@ -26,7 +14,7 @@ end
 # Hike.create(
 #   name: "Petrifying Springs Trail",
 #   park_id: 1,
-#   distance: "2.4 miles",
+#   distance: 2.4,
 #   time: "46 minutes",
 #   image_url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/04/ac/2b/petrifying-springs-park.jpg?w=1200&h=-1&s=1",
 #   route_type: "out & back",
