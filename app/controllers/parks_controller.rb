@@ -4,7 +4,9 @@ class ParksController < ApplicationController
   # render json: data
 
   def index
-    @parks = Park.all
+    page_size = 5
+
+    @parks = Park.all.limit(page_size).offset(params[:page].to_i * page_size)
     render :index
   end
 

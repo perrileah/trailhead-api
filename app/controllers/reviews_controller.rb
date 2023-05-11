@@ -1,6 +1,8 @@
 class ReviewsController < ApplicationController
   def index
-    @reviews = Review.all
+    page_size = 5
+
+    @reviews = Review.all.limit(page_size).offset(params[:page].to_i * page_size)
     render :index
   end
 
