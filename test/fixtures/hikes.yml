@@ -2,16 +2,18 @@
 
 one:
   name: MyString
-  park_id: 1
-  distance: MyString
+  park_name: MyString
+  distance: 1.5
   time: MyString
   image_url: MyString
   route_type: MyString
+  dog_friendly: false
 
 two:
   name: MyString
-  park_id: 1
-  distance: MyString
+  park_name: MyString
+  distance: 1.5
   time: MyString
   image_url: MyString
   route_type: MyString
+  dog_friendly: false

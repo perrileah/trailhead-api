@@ -9,11 +9,12 @@ class HikesController < ApplicationController
   def create
     @hike = Hike.create(
       name: params[:name],
-      park_id: params[:park_id],
+      park_name: params[:park_name],
       distance: params[:distance],
       time: params[:time],
       image_url: params[:image_url],
       route_type: params[:route_type],
+      dog_friendly: params[:dog_friendly]
     )
     if @hike.save
       render :show
@@ -31,11 +32,12 @@ class HikesController < ApplicationController
     @hike = Hike.find_by(id: params[:id])
     @hike.update(
       name: params[:name] || @hike.name,
-      park_id: params[:park_id] || @hike.park_id,
+      park_name: params[:park_name] || @hike.park_name,
       distance: params[:distance] || @hike.distance,
       time: params[:time] || @hike.time,
       image_url: params[:image_url] || @hike.image_url,
       route_type: params[:route_type] || @hike.route_type,
+      dog_friendly: params[:dog_friendly] || @hike.dog_friendly,
     )
     render :show
   end

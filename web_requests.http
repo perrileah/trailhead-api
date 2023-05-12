@@ -27,11 +27,12 @@ Content-Type: application/json
 
 {
   "name": "Horsetooth Mountain Trail",
-  "park_id": 1,
-  "distance": "8.9 miles",
+  "park_name": "Horsetooth Mountain Open Space",
+  "distance": 8.9,
   "time": "4 hours 38 minutes",
   "image_url": "https://www.larimer.gov/sites/default/files/06_horsetooth_mountain_01_by_jeanie_sumrall-ajero.jpg",
-  "route_type": "loop"
+  "route_type": "loop",
+  "dog_friendly": true
 }
 
 ###

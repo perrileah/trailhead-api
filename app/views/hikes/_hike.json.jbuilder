@@ -5,4 +5,4 @@ json.distance hike.distance
 json.time hike.time
 json.image_url hike.image_url
 json.route_type hike.route_type
-json.features hike.features
+json.dog_friendly hike.dog_friendly
