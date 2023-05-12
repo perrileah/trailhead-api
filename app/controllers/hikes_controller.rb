@@ -10,11 +10,12 @@ class HikesController < ApplicationController
     @hike = Hike.create(
       name: params[:name],
       park_name: params[:park_name],
+      park_id: params[:park_id],
       distance: params[:distance],
       time: params[:time],
       image_url: params[:image_url],
       route_type: params[:route_type],
-      dog_friendly: params[:dog_friendly]
+      dog_friendly: params[:dog_friendly],
     )
     if @hike.save
       render :show
