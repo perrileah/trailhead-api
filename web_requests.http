@@ -1,4 +1,4 @@
-@jwt = yJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2ODM3NDAzNzF9.rbrv6x5TWzAyj-ul0lxM4_vowv548QpVHBD4bfJhsug
+@jwt = yJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2ODQwMDQ1MTV9.eYXaUGw5lpfy4tbSfXMG6qv93ZeOevwQMuZCRZN6aOc
 
 POST http://localhost:3000/sessions.json
 Content-Type: application/json 
@@ -14,8 +14,8 @@ POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "name": "Leah",
-  "email": "Leah@test.com",
+  "name": "Crush",
+  "email": "Crush@test.com",
   "password": "password",
   "password_confirmation": "password",
   "image_url": "image url"
